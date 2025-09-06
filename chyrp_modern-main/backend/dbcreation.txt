@@ -1,0 +1,7 @@
+CREATE DATABASE chyrp_modern CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE USER 'chyrp_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'AAAA';
+
+GRANT ALL PRIVILEGES ON chyrp_modern.* TO 'chyrp_user'@'localhost';
+
+FLUSH PRIVILEGES;

@@ -1,0 +1,143 @@
+/* BlogView.css - Updated to fix image overflow issues */
+.word-style-content {
+  background-color: #2d2d2d;
+  padding: 2rem;
+  border-radius: 8px;
+  line-height: 1.8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.word-style-content h1 {
+  color: #bb86fc;
+  margin: 2rem 0 1.5rem 0;
+  font-size: 2.5rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.word-style-content h2 {
+  color: #bb86fc;
+  margin: 1.8rem 0 1.2rem 0;
+  font-size: 2rem;
+}
+
+.word-style-content h3 {
+  color: #bb86fc;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.word-style-content p {
+  margin: 1.2rem 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.word-style-content ul, .word-style-content ol {
+  margin: 1.2rem 0;
+  padding-left: 2.5rem;
+}
+
+.word-style-content li {
+  margin: 0.5rem 0;
+  color: #e0e0e0;
+}
+
+/* Fix for image overflow */
+.word-style-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block; /* Ensure proper block-level behavior */
+}
+
+/* Additional container for images to ensure proper containment */
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.word-style-content a {
+  color: #03dac6;
+  text-decoration: underline;
+}
+
+.word-style-content a:hover {
+  color: #bb86fc;
+}
+
+.word-style-content blockquote {
+  border-left: 4px solid #bb86fc;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.word-style-content code {
+  background-color: #1a1a1a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.word-style-content pre {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+.word-style-content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .word-style-content {
+    padding: 1rem;
+  }
+  
+  .word-style-content h1 {
+    font-size: 2rem;
+  }
+  
+  .word-style-content h2 {
+    font-size: 1.7rem;
+  }
+  
+  .word-style-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .word-style-content p {
+    font-size: 1rem;
+  }
+  
+  /* Ensure images don't overflow on mobile */
+  .word-style-content img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
